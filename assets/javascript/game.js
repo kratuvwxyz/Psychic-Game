@@ -109,8 +109,8 @@ var reset = function() {
 var updateGuessesLeft = function() {
     // Here we are grabbing the HTML element and setting it equal to the guessesLeft. (i.e. guessesLeft will get displayed in HTML)
     if (guessesLeft >= 2) {
-        document.querySelector("#aNumChg").innerHTML = "You have " + guessesLeft + " chances <span style='white-space: nowrap;'>to match that character!</span>";
-    } else { document.querySelector("#aNumChg").innerHTML = "You have last chance <span style='white-space: nowrap;'>to match that character!</span>"; }
+        document.querySelector("#aNumChg").innerHTML = "You have <span style='white-space: nowrap;'>" + guessesLeft + " chances</span> <span style='white-space: nowrap;'>to match that</span> character!";
+    } else { document.querySelector("#aNumChg").innerHTML = "You have last chance <span style='white-space: nowrap;'>to match that</span> character!"; }
 };
 
 var updateGuessesSoFar = function() {
@@ -143,7 +143,7 @@ document.onkeyup = function(event) {
     if (guessesLeft > 0) {
         if (userGuess == letterToGuess) {
             wins++;
-            document.querySelector('#win').innerHTML = "Your Wins: " + wins;
+            document.querySelector('#win').innerHTML = "Total Wins: " + wins;
             document.querySelector('#areYouReady').innerHTML = "Yes, you are psychic!!";
             document.querySelector('#compGuessDisplay').innerHTML = letterToGuess;
             reset();
@@ -153,7 +153,7 @@ document.onkeyup = function(event) {
 
     } else if (guessesLeft == 0) {
         losses++;
-        document.querySelector('#loss').innerHTML = "Your Losses: " + losses;
+        document.querySelector('#loss').innerHTML = "Total Losses: " + losses;
         document.querySelector('#areYouReady').innerHTML = "Nope, you are NOT psychic, play again!";
         document.querySelector('#compGuessDisplay').innerHTML = letterToGuess;
         reset();
