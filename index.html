@@ -113,7 +113,8 @@
     <!--:::::::::::::::::::::::::::::::::::::::
   Document Wrapper
 ::::::::::::::::::::::::::::::::::::::::-->
-
+    
+    <!-- jumbotron -->
     <div class="container">
         <div class="row">
             <div class="jumbotron col-lg-12 text-center bg-transparent">
@@ -122,29 +123,31 @@
             </div>
         </div>
     </div>
+    <!-- main-display in red -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 bg-danger p-5 text-center text-light">
                 <h5>Match your guess with randomly selected character in between "a" to "z."</h5>
-                <h2>You have <u id="chances" class="font-weight-bolder">last chance</u> left to match that character.</h2>
-                <h2 id="notes">Are you ready?</h2>
+                <h2>You have <u id="chances" class="font-weight-bolder">last chance</u> left to match that character. <span id="notes">Are you ready?</span></h2>
+                
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-light">
+    <!-- game container -->
+    <div class="container-fluid">
         <div class="row mt-5">
             <!-- thumbs up -->
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 display-4 text-danger p-5"><i class="fa fa-thumbs-up"></i></div>
+            <div class="col-6 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-thumbs-up"></i>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">0</strong></div>
             <!-- thumbs down -->
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 display-4 text-danger p-5"><i class="fa fa-thumbs-down"></i></div>
+            <div class="col-6 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-thumbs-down"></i>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">0</strong></div>
             <!-- computer guessed -->
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 display-4 text-danger p-5"><i class="fa fa-robot"></i></div>
+            <div class="col-12 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-robot"></i>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
             <!-- user guessed -->
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 display-4 text-danger p-5"><i class="fas fa-grin"></i></div>
+            <div class="col-12 col-sm-12 col-lg-6 display-4 text-danger p-3"><span id="emoji"><i class="fas fa-grin"></i></span>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
         </div>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center p-3" style="background-image: url('https://raw.githubusercontent.com/kratuvwxyz/assets2/master/images/background/pattern/confectionary.png'); margin-bottom: -2px;">
@@ -183,7 +186,7 @@
             </div>
         </div>
     </div>
-    <div id="demo"></div>
+    <div id="demo"></div> -->
 
     <!--:::::::::::::::::::::::::::::::::::::::
 Footer
