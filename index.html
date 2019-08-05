@@ -125,11 +125,10 @@
     </div>
     <!-- main-display in red -->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 bg-danger p-5 text-center text-light">
+        <div class="row bg-danger">
+            <div class="col-md-12 p-5 text-center text-light">
                 <h5>Match your guess with randomly selected character in between "a" to "z."</h5>
-                <h2>You have <u id="chances" class="font-weight-bolder">last chance</u> left to match that character. <span id="notes">Are you ready?</span></h2>
-                
+                <h2><span id="notes">Try your guess now!</span> You have <u id="chances" class="font-weight-bolder">9 chances</u> left to match that character.</h2>
             </div>
         </div>
     </div>
@@ -139,11 +138,11 @@
             <!-- thumbs up -->
             <div class="col-6 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-thumbs-up"></i>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">0</strong></div>
             <!-- thumbs down -->
-            <div class="col-6 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-thumbs-down"></i>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">0</strong></div>
+            <div class="col-6 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-thumbs-down"></i>&#160;&#160;<strong id="oneMinus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">0</strong></div>
             <!-- computer guessed -->
-            <div class="col-12 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-robot"></i>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
+            <div class="col-12 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-robot"></i>&#160;&#160;<strong id="computerGuessScreen" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
             <!-- user guessed -->
-            <div class="col-12 col-sm-12 col-lg-6 display-4 text-danger p-3"><span id="emoji"><i class="fas fa-grin"></i></span>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
+            <div class="col-12 col-sm-12 col-lg-6 display-4 text-danger p-3"><span id="emoji"><i class="fas fa-grin"></i></span>&#160;&#160;<strong id="guessedOne" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
         </div>
     </div>
 
