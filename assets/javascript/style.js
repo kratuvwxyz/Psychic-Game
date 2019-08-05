@@ -1,3 +1,4 @@
+
 //reset
 function resetZero(){
     if (window.confirm("Do you really want to reset your game?")) { 
