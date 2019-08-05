@@ -14,7 +14,14 @@ h6 {
     font-family: 'IBM Plex Serif', serif;
 }
 
-footer {
-    background-image: url(https://raw.githubusercontent.com/kratuvwxyz/assets2/master/images/background/pattern/confectionary.png);
+#footer {
+    background-image: url('../images/background/confectionary.png');
     background-color: khaki;
+    padding-top: 20px;
+}
+
+#footer li {
+    float: left;
+    list-style: none;
+    margin-right: 20px;
 }

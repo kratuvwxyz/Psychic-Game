@@ -21,6 +21,9 @@ const computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
 const compGuess = function() {
     //hide button
     document.querySelector('#hideButton').style.display = "none";
+    document.querySelector('#hideHeader').style.display = "none";
+    document.querySelector('#showGame').style.display = "block";
+    document.querySelector('#showButton').style.display = "block";
 
     //let computer choose in between a to z
     let charComputerChoice = Math.floor(Math.random() * computerChoices.length);

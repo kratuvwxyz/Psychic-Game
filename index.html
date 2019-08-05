@@ -115,11 +115,13 @@
 ::::::::::::::::::::::::::::::::::::::::-->
     
     <!-- jumbotron -->
-    <div class="container">
+    <div class="container" id="hideHeader">
         <div class="row">
             <div class="jumbotron col-lg-12 text-center bg-transparent">
                 <h1>Psychic Games</h1>
                 <small>by <a href="https://desaign.app" class="text-decoration-none">DESAIGN.STUDIO</a></small>
+                <br><br>
+                <h5>Match your guess with randomly selected character in between "a" to "z."</h5>
             </div>
         </div>
     </div>
@@ -127,121 +129,68 @@
     <div class="container-fluid">
         <div class="row bg-danger">
             <div class="col-md-12 p-5 text-center text-light">
-                <h5>Match your guess with randomly selected character in between "a" to "z."</h5>
-                <h2><span id="notes">Try your guess now!</span> You have <u id="chances" class="font-weight-bolder">9 chances</u> left to match that character.</h2>
+                <h2><span id="notes">Try your guess now!</span><br/>You have <u id="chances" class="font-weight-bolder">9 chances</u> left to match that character.</h2>
             </div>
         </div>
     </div>
     <!-- game container -->
-    <div class="container-fluid">
-        <div class="row mt-5">
-            <!-- thumbs up -->
-            <div class="col-6 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-thumbs-up"></i>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">0</strong></div>
-            <!-- thumbs down -->
-            <div class="col-6 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-thumbs-down"></i>&#160;&#160;<strong id="oneMinus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">0</strong></div>
-            <!-- computer guessed -->
-            <div class="col-12 col-sm-4 col-lg-2 display-4 text-danger p-3"><i class="fa fa-robot"></i>&#160;&#160;<strong id="computerGuessScreen" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
-            <!-- user guessed -->
-            <div class="col-12 col-sm-12 col-lg-6 display-4 text-danger p-3"><span id="emoji"><i class="fas fa-grin"></i></span>&#160;&#160;<strong id="guessedOne" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
+    <div class="container-fluid" id="showGame" style="display: none;">
+        <div class="row mt-5 p-5">
+            <div class="col-12 col-sm-12 col-md-4">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-12">
+                        <!-- thumbs up -->
+                        <div class="display-4 text-danger p-3"><i class="fa fa-thumbs-up"></i>&#160;&#160;<strong id="onePlus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">0</strong></div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-12">
+                        <!-- thumbs down -->
+                        <div class="display-4 text-danger p-3"><i class="fa fa-thumbs-down"></i>&#160;&#160;<strong id="oneMinus" class="text-info shadow-lg px-3 mb-5 bg-white rounded">0</strong></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-8">
+                <div class="row">
+                    <!-- computer guessed -->
+                    <div class="display-4 text-danger p-3"><i class="fa fa-robot"></i>&#160;&#160;<strong id="computerGuessScreen" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
+                </div>
+                <div class="row">
+                    <!-- user guessed -->
+                    <div class="display-4 text-danger p-3"><span id="emoji" class="px-2"><i class="fas fa-grin"></i></span>&#160;&#160;<strong id="guessedOne" class="text-info shadow-lg px-3 mb-5 bg-white rounded">?</strong></div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- play button -->
 
-    <div class="btn btn-danger px-5 m-5" id="hideButton" onclick="compGuess()">PLAY</div>
+    <div class="btn btn-secondary btn-lg btn-block mt-3" id="hideButton" onclick="compGuess()">PLAY</div>
 
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-center p-3" style="background-image: url('https://raw.githubusercontent.com/kratuvwxyz/assets2/master/images/background/pattern/confectionary.png'); margin-bottom: -2px;">
-                    <h1>Psychic Game</h1>
-                    <p>Let's find out, how good are you!?!</p>
-                </div>
-                <div class="bg-danger p-4 text-light text-center">
-                    <h5>You have to guess randomaly selected <span style="white-space: nowrap;">one alphabetic character!</span></h5>
-                    <h1 id="aNumChg">You have 9 chances <span style="white-space: nowrap;">to match that character!</span></h1>
-                    <div class="bg-warning p-2">
-                        <h3 class="text-dark" style="letter-spacing: 2px;" id="areYouReady">Are You Ready?</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row p-3">
-            <div class="col-lg-3 bg-dark p-4">
-                <div class="text-light">
-                    <h3 id="win">Total wins: 0</h3>
-                </div>
-                <hr class="bg-light">
-                <div class="text-light">
-                    <h3 id="loss">Total losses: 0</h3>
-                </div>
-            </div>
-            <div class="col-lg-3 p-4 text-light bg-info">
+    <!-- reset button -->
 
-                <h1>Letter <br/>Guessed: <span id="compGuessDisplay">?</span></h1>
+    <div class="btn btn-light btn-lg btn-block mt-3" id="showButton" style="display: none;" onclick="window.location.reload();">RESET YOUR PLAY</div>
 
-            </div>
-            <div class="col-lg-6 p-4 bg-light">
-                <div id="youGuessDisplay">
-                    <h1>You Guess:
-                        <br><span id="youGuessLetters">?</span></h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="demo"></div> -->
-
+    <!-- horizontal line separator -->
+    <hr class="p-5 m-5 text-danger">
     <!--:::::::::::::::::::::::::::::::::::::::
 Footer
 ::::::::::::::::::::::::::::::::::::::::-->
 
-    <br><br><br><br><br><br><br><br><br>
-
-    <section id="footerSection">
-
-        <footer class="w3-container w3-bottom w3-topbar w3-border-dark-gray w3-khaki" id="footerCopyright">
-
-            <!--links-->
-            <div id="footerLinks" class="w3-padding-16">
-                <a href="https://github.com/kratuvwxyz/Psychic-Game" target="_blank"><i class="fa fa-github w3-btn" style="font-size:25px;color: #bd2c00;"></i></a> |
-                <a href="https://linkedin.com/in/desaignstudio" target="_blank"><i class="fa fa-linkedin-square w3-btn" style="font-size:25px;color: #0077b5;"></i></a> |
-                <a href="index.html" class="w3-text-dark-gray w3-btn">#PsychicLetterGame</a>
-                <hr>
-            </div>
-
-            <!--logo-->
-            <div id="logoCopyright" class="w3-row w3-display-container w3-padding-24">
-
-                <img src="https://kratuvwxyz.github.io/assets/images/footer/DESAIGNLLC.svg" alt="desaign llc" height="60" border="none" style="padding-bottom: 5px;" />
-
-                <span class="w3-display-bottom" style="white-space: nowrap; font-size: 12px; line-height: 20px; letter-spacing: 1px; color: #34495e; vertical-align: bottom;">&#160;&copy; 2011-<script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> <a href="http://desaign.studio" style="color:#e74c3c; text-decoration: underline; vertical-align: bottom;" target="_blank" >DESAIGN.STUDIO</a> All Rights Reseverd.</span>
-
-                <!--plog number-->
-                <div id="plog" class="w3-bottom w3-khaki" style="z-index: 99999"><span class="w3-display-bottomright w3-padding-small w3-margin-right w3-opacity" style="font-size: 10px;">18324C01AA</span></div>
-
-            </div>
-
-        </footer>
-
-        <script type="text/javascript">
-            window.onscroll = function() {
-                scrollFunction()
-            };
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("footerCopyright").style.bottom = "-140px";
-                } else {
-                    document.getElementById("footerCopyright").style.bottom = "0px";
-                }
-            }
-
-            $(".w3-btn").hover(function() {
-                $(this).css("box-shadow", "none");
-            });
-        </script>
-
-    </section>
+    <div class="container-fluid" id="footer">
+        <div class="row">
+            <ul>
+                <li><a href="https://github.com/kratuvwxyz/Psychic-Game"><i class="fab fa-github" style="font-size:25px;color: #bd2c00;"></i></a></li>
+                <li>|</li>
+                <li><a href="https://linkedin.com/in/desaigner"><i class="fab fa-linkedin" style="font-size:25px;color: #0077b5;"></i></a></li>
+                <li>|</li>
+                <li>1908050300</li>
+            </ul>
+        </div>
+        <div class="row p-4">
+            <img src="https://kratuvwxyz.github.io/assets/images/footer/DESAIGNLLC.svg" alt="desaign logo" height="60" class="pb-1">
+            <span class="d-flex align-items-end" style="white-space: nowrap; font-size: 12px; line-height: 20px; letter-spacing: 1px; color: #34495e; vertical-align: bottom;">&#160;&copy; 2011-<script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> <a href="http://desaign.studio" style="color:#e74c3c; text-decoration: underline; vertical-align: bottom;" target="_blank" >DESAIGN.STUDIO</a> All Rights Reseverd.</span>
+        </div>
+    </div>
+    
 
     <!--:::::::::::::::::::::::::::::::::::::::
 External JavaScripts
