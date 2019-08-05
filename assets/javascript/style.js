@@ -1,4 +1,14 @@
+//reset
+function resetZero(){
+    if (window.confirm("Do you really want to reset your game?")) { 
+        window.location.reload();
+      } else {
+          alert('Good choice!');
+      }
+}
 
+
+//game
 let wins = 0;
 let loss = 0;
 let userChances = 9;
@@ -93,6 +103,9 @@ const compGuess = function() {
 
             //winning statement
             document.querySelector("#notes").innerText = "You are the psychic! Play again!"
+
+            //emoji
+            document.querySelector('#emoji').innerHTML = ('<i class="fas fa-grin-stars"></i>');
 
             //reset all value and restart game
             reset();
