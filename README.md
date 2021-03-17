@@ -24,6 +24,10 @@ Guess the alphabetic character.
 - Visual Studio Code Editor
 - Github for versioning
 
+### Thank you
+
+- https://css-tricks.com/almanac/properties/p/pointer-events/
+
 
 ## CONTACT
 

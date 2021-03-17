@@ -11,12 +11,32 @@ let selections = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
   key = 0;
 
 $(document).ready(function () {
-  b = selections[Math.floor(Math.random() * selections.length)];
+  reset();
 });
+
+reset = () => {
+  b = selections[Math.floor(Math.random() * selections.length)];
+  splitSelections = selections.split("");
+  console.log(splitSelections);
+  key = 0;
+  $(".compGuess")
+    .removeClass("bg-warning text-dark bg-danger text-light")
+    .text("?");
+  for (let i = 0; i < 10; i++) {
+    let t = $("<kbd>")
+      .addClass("clue" + i)
+      .text("?");
+    $(".humanClue").append(t);
+  }
+  for (let j= 0; j < splitSelections.length; j++) {
+      let q = $("<kbd>").addClass('keyboard').text(splitSelections[j]).attr('data-key', splitSelections[j]);
+      $('.keyboardKeys').append(q);
+  }
+  $(".keyboard").removeClass("avoid-clicks");
+};
 
 $(document).on("click", ".keyboard", function (e) {
   let a = $(this).attr("data-key");
-  console.log(a, b, splitSelections);
   splitSelections.includes(a) ? matchThis(a, b) : console.log("used key");
 });
 
@@ -26,13 +46,20 @@ matchThis = (x, y) => {
 };
 
 playAgain = (x) => {
-  key < 11 ? [$(".clue" + key).text(x), key++] : loss();
+  key < 9
+    ? [$(".clue" + key).text(x), key++]
+    : [$(".clue" + key).text(x), loss()];
 };
 
 win = () => {
   console.log("winner");
+  $(".compGuess").html(b).addClass("bg-warning text-dark");
+  reset();
 };
 
 loss = () => {
   console.log("looser");
+  $(".compGuess").html(b).addClass("bg-danger text-light");
+  $(".keyboard").addClass("avoid-clicks");
+  setTimeout(() => reset(), 5000);
 };

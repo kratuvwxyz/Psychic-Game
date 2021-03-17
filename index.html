@@ -153,10 +153,13 @@
         cursor: pointer;
       }
       kbd:hover {
-          background-color: #e6e6e6;
+        background-color: #e6e6e6;
       }
       .iconSize {
         font-size: 10vw;
+      }
+      .avoid-clicks {
+        pointer-events: none;
       }
       @media only screen and (max-width: 991px) {
         /* .display-container-2 {
@@ -198,7 +201,7 @@
                   <br />
                   <button
                     class="btn btn-warning start"
-                    style="letter-spacing: 2px; font-size: .725rem;"
+                    style="letter-spacing: 2px; font-size: 0.725rem"
                     onclick="start()"
                   >
                     LET'S PLAY <i class="fas fa-chevron-circle-right"></i>
@@ -216,18 +219,22 @@
                     <kbd class="compGuess">?</kbd>
                     <br /><br />
                     <h6>
-                        You have
-                        <span class="badge badge-secondary bg-danger" style="font-size: .825em;">10 chances</span>
-                        to guess!
+                      You have
+                      <span
+                        class="badge badge-secondary bg-danger"
+                        style="font-size: 0.825em;"
+                        >10 chances</span
+                      >
+                      <span style="white-space: nowrap;">to guess!</span>
                     </h6>
                     <br />
                     <button
-                    class="btn btn-info reset"
-                    style="letter-spacing: 2px; font-size: .725rem;"
-                    onclick="reset()"
-                  >
-                    RESET PLAY <i class="fas fa-chevron-circle-right"></i>
-                  </button>
+                      class="btn btn-info reset"
+                      style="letter-spacing: 2px; font-size: 0.725rem"
+                      onclick="reset()"
+                    >
+                      RESET PLAY <i class="fas fa-chevron-circle-right"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -245,16 +252,7 @@
                   <div class="text-center">
                     <i class="fas fa-smile iconSize"></i>
                     <br /><br />
-                    <kbd class="clue0">?</kbd>
-                    <kbd class="clue1">?</kbd>
-                    <kbd class="clue2">?</kbd>
-                    <kbd class="clue3">?</kbd>
-                    <kbd class="clue4">?</kbd>
-                    <kbd class="clue5">?</kbd>
-                    <kbd class="clue6">?</kbd>
-                    <kbd class="clue7">?</kbd>
-                    <kbd class="clue8">?</kbd>
-                    <kbd class="clue9">?</kbd>
+                    <div class="humanClue"></div>
                   </div>
                 </div>
               </div>
@@ -264,43 +262,9 @@
             <div class="container-fluid">
               <div class="row m-2 text-center" style="overflow-y: auto">
                 <div class="col boxfour mb-5 d-none">
-                  <h6>Keyboard</h6><hr />
-                  <kbd class="keyboard" data-key="A">A</kbd>
-                  <kbd class="keyboard" data-key="B">B</kbd>
-                  <kbd class="keyboard" data-key="C">C</kbd>
-                  <kbd class="keyboard" data-key="D">D</kbd>
-                  <kbd class="keyboard" data-key="E">E</kbd>
-                  <kbd class="keyboard" data-key="F">F</kbd>
-                  <kbd class="keyboard" data-key="G">G</kbd>
-                  <kbd class="keyboard" data-key="H">H</kbd>
-                  <kbd class="keyboard" data-key="I">I</kbd>
-                  <kbd class="keyboard" data-key="J">J</kbd>
-                  <kbd class="keyboard" data-key="K">K</kbd>
-                  <kbd class="keyboard" data-key="L">L</kbd>
-                  <kbd class="keyboard" data-key="M">M</kbd>
-                  <kbd class="keyboard" data-key="N">N</kbd>
-                  <kbd class="keyboard" data-key="O">O</kbd>
-                  <kbd class="keyboard" data-key="P">P</kbd>
-                  <kbd class="keyboard" data-key="Q">Q</kbd>
-                  <kbd class="keyboard" data-key="R">R</kbd>
-                  <kbd class="keyboard" data-key="S">S</kbd>
-                  <kbd class="keyboard" data-key="T">T</kbd>
-                  <kbd class="keyboard" data-key="U">U</kbd>
-                  <kbd class="keyboard" data-key="V">V</kbd>
-                  <kbd class="keyboard" data-key="W">W</kbd>
-                  <kbd class="keyboard" data-key="X">X</kbd>
-                  <kbd class="keyboard" data-key="Y">Y</kbd>
-                  <kbd class="keyboard" data-key="Z">Z</kbd>
-                  <kbd class="keyboard" data-key="1">1</kbd>
-                  <kbd class="keyboard" data-key="2">2</kbd>
-                  <kbd class="keyboard" data-key="3">3</kbd>
-                  <kbd class="keyboard" data-key="4">4</kbd>
-                  <kbd class="keyboard" data-key="5">5</kbd>
-                  <kbd class="keyboard" data-key="6">6</kbd>
-                  <kbd class="keyboard" data-key="7">7</kbd>
-                  <kbd class="keyboard" data-key="8">8</kbd>
-                  <kbd class="keyboard" data-key="9">9</kbd>
-                  <kbd class="keyboard" data-key="0">0</kbd>
+                  <h6>Keyboard</h6>
+                  <hr />
+                  <div class="keyboardKeys"></div>
                   <hr />
                 </div>
               </div>
