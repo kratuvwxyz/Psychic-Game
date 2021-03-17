@@ -8,26 +8,31 @@ Guess the alphabetic character.
 
 ### Version
 
-- **...**
-- Last Update: ...
+- **2103171454**
+- Last Update: 21/03/17
 
 ### Standards
 
-- ...
+- HTML5, CSS3, JavaScript
 
 ### Components
 
-- ...
+- JQuery, Bootstrap, Font Awesome 5
 
 ### Software
 
 - Visual Studio Code Editor
 - Github for versioning
 
+### Next Version
+
+- Ask user to select machine guess (numbers only, special characters, etc.)
+- Change human guessing changes between 8 to 12
+
 ### Thank you
 
 - https://css-tricks.com/almanac/properties/p/pointer-events/
-
+- https://www.w3schools.com/jsref/met_win_clearinterval.asp
 
 ## CONTACT
 
