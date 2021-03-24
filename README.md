@@ -1,38 +1,48 @@
-# Psychic-Letter-Game
+# Alphabet Guessing Game by Desaign Studio
 
 Guess the alphabetic character.
 
-### How to play?
+### Gameplay
 
-- You have 9 chances to guess a alphabetic character that computer generated randemly!
+<img src="./SS1.png" alt="Screen Shot" width="500">
+
+- You have 12 chances to guess a alphabetic character or number that machine generated randemly!
 
 ### Version
 
 - **2103171454**
-- Last Update: 21/03/17
+✔ Last Update @done (March 24th 2021, 15:07)
 
-### Standards
+### Framework
 
 - HTML5, CSS3, JavaScript
 
-### Components
+### Built With
 
-- JQuery, Bootstrap, Font Awesome 5
+- JQuery, Bootstrap, Google Fonts, SVG, Font Awesome Icons
 
 ### Software
 
 - Visual Studio Code Editor
 - Github for versioning
 
-### Next Version
-
-- Ask user to select machine guess (numbers only, special characters, etc.)
-- Change human guessing changes between 8 to 12
-
-### Thank you
+### Credits
 
 - https://css-tricks.com/almanac/properties/p/pointer-events/
 - https://www.w3schools.com/jsref/met_win_clearinterval.asp
+
+### CONTRIBUTE
+
+- A [contributing guideline](https://github.com/kratuvwxyz/CONTRIBUTE) available.
+
+### LICENSE
+
+- [MIT](https://github.com/kratuvwxyz/LICENSE) © 2021 Kratu Desai, DESAIGN LLC.
+
+### Upcoming Versioning
+
+- Ask user to select machine guess (numbers only, special characters, etc.)
+- Change human guessing changes between 8 to 12
 
 ## CONTACT
 
